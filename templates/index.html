@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>技术方案自动定级 (网页版)</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>技术方案自动定级</h1>
+
+        <label for="project-type">项目类型:</label>
+        <select id="project-type">
+            <option value="">请选择...</option>
+            {% for type in project_types %}
+                <option value="{{ type }}">{{ type }}</option>
+            {% endfor %}
+        </select>
+
+        <label for="project-phase">项目阶段:</label>
+        <select id="project-phase" disabled>
+            <option value="">请先选择项目类型...</option>
+        </select>
+
+        <label for="document-name">技术文件:</label>
+        <select id="document-name" disabled>
+            <option value="">请先选择项目阶段...</option>
+        </select>
+
+        <label for="amount">合同金额 (万美元):</label>
+        <input type="number" id="amount" placeholder="例如: 5000">
+
+        <button id="query-button">查 询</button>
+
+        <div class="result-area">
+            <h2>自动定级结果: <span id="result-level">---</span></h2>
+            <button id="feedback-button" class="feedback-btn">反馈意见</button>
+        </div>
+
+        <h2>审批流图示:</h2>
+        <canvas id="flowchart-canvas" width="700" height="450"></canvas>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

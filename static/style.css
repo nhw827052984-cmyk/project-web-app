@@ -1,0 +1,79 @@
+/* /static/style.css */
+body {
+    font-family: "Microsoft YaHei UI", sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.container {
+    width: 100%;
+    max-width: 800px;
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+h1, h2 {
+    color: #005A9E;
+    border-bottom: 2px solid #f0f2f5;
+    padding-bottom: 10px;
+}
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+select, input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box; /* 确保 padding 不会撑大宽度 */
+}
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #0078D7;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+button:hover {
+    background-color: #005A9E;
+}
+.result-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+#result-level {
+    color: #D32F2F;
+    font-size: 1.5em;
+}
+.feedback-btn {
+    width: auto;
+    background-color: #777;
+    font-size: 14px;
+    padding: 8px 12px;
+    margin-top: 0;
+}
+.feedback-btn:hover {
+    background-color: #555;
+}
+#flowchart-canvas {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    background-color: #fafafa;
+    margin-top: 10px;
+}
